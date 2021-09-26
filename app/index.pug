@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title BisLite 
+        link(rel="shortcut icon", href="./images/BisLite.png")
+        link(rel="stylesheet", href="./css/libs.min.css")
+        link(rel="stylesheet", href="./css/style.min.css")
+    body
+        // start header
+        header.header
+            .container
+                .header__inner
+                    .header__logo 
+                        a(href="#") 
+                            img(src="./images/BisLite.png", alt="BisLite")
+                    nav.header__menu
+                        ul.header__menu-list
+                            li
+                                a(href="#") Home
+                            li
+                                a(href="#") About Us
+                            li.drop__down
+                                a(href="#") Services
+                                ul.drop__down-list 
+                                    li
+                                        a(href="#") Web Design
+
+                                    li
+                                        a(href="#") Wordpress Design
+
+                                    li
+                                        a(href="#") Mobile App Development
+
+                                    li
+                                        a(href="#") Internet Marketing
+
+                                    li
+                                        a(href="#") Social Media Management
+                            li.drop__down 
+                                a(href="#") Portfolio
+                            li
+                                a(href="#") Blog
+                            li
+                                a(href="#") Contact Us
+            // end header
+        script(src="./js/libs.min.js")
+        script(src="./js/main.js")  

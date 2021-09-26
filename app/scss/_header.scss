@@ -1,0 +1,60 @@
+.header {
+    background-color: $lgray;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 36px 0 41px;
+        align-items: center;
+    }
+    &__menu-list >  li {
+        border-top: 5px solid transparent;
+        padding: 10px 27px 14px 9px;
+        position: relative;
+        & + li {
+            margin-left: 14px;
+        }
+        &:hover > a {
+            color: $blue;
+        }
+        &.drop__down {
+            &:hover {
+                background-color: #fff;
+                border-top: 5px solid $blue;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url(../images/down_arrow.svg);
+                width: 7px;
+                height: 5px;
+                top: 13px;
+                right: 10px;
+            }
+        }
+    }
+    & a {
+        color: #000;
+        text-transform: uppercase;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+    }
+}
+
+.drop__down{
+    position: relative;
+    &-list{
+        left: 0;
+        top: 42px;
+        position: absolute;
+        background-color: #fff;
+        width: max-content;
+        & li{
+            display: block;
+            padding: 0 5px;
+        }
+        & a{
+            text-transform: capitalize;
+        }
+    }
+}
