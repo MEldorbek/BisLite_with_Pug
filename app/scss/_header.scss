@@ -6,7 +6,7 @@
         padding: 36px 0 41px;
         align-items: center;
     }
-    &__menu-list >  li {
+    &__menu-list li {
         border-top: 5px solid transparent;
         padding: 10px 27px 14px 9px;
         position: relative;
@@ -15,11 +15,19 @@
         }
         &:hover > a {
             color: $blue;
+            transition: all .5s;
         }
         &.drop__down {
             &:hover {
                 background-color: #fff;
                 border-top: 5px solid $blue;
+                transition: all .5s;
+                & .drop__down-list {
+                    overflow: visible;
+                    opacity: 1;
+                    height: auto;
+                    transition: all .5s;
+                }
             }
             &::before {
                 content: "";
@@ -27,7 +35,7 @@
                 background-image: url(../images/down_arrow.svg);
                 width: 7px;
                 height: 5px;
-                top: 13px;
+                top: 16px;
                 right: 10px;
             }
         }
@@ -41,20 +49,39 @@
     }
 }
 
-.drop__down{
+.drop__down {
     position: relative;
-    &-list{
-        left: 0;
+    &-list {
+        left: -1px;
         top: 42px;
         position: absolute;
         background-color: #fff;
         width: max-content;
-        & li{
+        padding: 10px 5px;
+        border: 1px solid $lgray;
+        border-top: none;
+        overflow: hidden;
+        opacity: 0;
+        height: 0;
+        & li {
             display: block;
-            padding: 0 5px;
+            padding: 13px 11px 12px;
+            & + li {
+                border-top: 1px solid $line;
+                margin-left: 0;
+            }
         }
-        & a{
+        & a {
             text-transform: capitalize;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            width: calc(100% + 2px);
+            background-color: $blue;
+            bottom: -6px;
+            left: -1px;
         }
     }
 }
