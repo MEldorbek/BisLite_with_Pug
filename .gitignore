@@ -8,3 +8,4 @@ app/*.html
 node_modules/
 app/css/
 package-lock.json
+app/js/libs.min.js
